@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Pre-requisites
-permalink: /pre-requisites/
+permalink: /pre-requisites
+nav_order: 1
 ---
 
 # Pre-Requisites
