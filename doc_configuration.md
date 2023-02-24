@@ -50,5 +50,31 @@ EOF)"
 
 
 ## Secret
-A Secret is used to store one component which you should have 
+A Secret is used to store one component: the slack API token. If you do not have one yet, see the pre-requisites page to retrieve yours.
 
+
+``` 
+kubectl create -f - <<EOF
+    kind: Secret
+    apiVersion: v1
+    metadata:
+        name: heimdall-secret
+        namespace: heimdall-controller
+    data:
+        slack-token-token
+    type: Opaque
+
+EOF
+```
+Below is the patch command. If Heimdall has already been installed and has created the Config Map, or if you have created it with incorrect values, changing the below key-value pairs and running the command will update the pre-existing Config Map.
+
+
+```
+kubectl patch secret heimdall-settings -n heimdall-controller --type merge --patch "$(cat <<EOF
+    data:
+        high-priority-cadence: '60s'
+        medium-priority-cadence: '300s'
+        low-priority-cadence: '600s'
+        slack-channel: slack-channel-name
+EOF)"
+```
