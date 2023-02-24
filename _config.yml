@@ -1,8 +1,7 @@
 title: Heimdall Wiki
-description: A starter template for a Jeykll site using the Just the Docs theme!
 theme: just-the-docs
 
 url: https://heimdall.wiki
 
 aux_links:
-  GitHub Repository: https://github.com/heimdall-controller/heimdall-controller.github.io
+  Heimdall GitHub: https://github.com/heimdall-controller/heimdall
