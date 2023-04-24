@@ -24,7 +24,8 @@ git clone https://github.com/heimdall-controller/heimdall.git
 
 ### Run Installation Script
 ```
-cd templates/scripts/install.sh
+cd templates/scripts/
+./install.sh
 ```
 
 You should wait until you are promted for input before continuing. You will be asked to enter 5 values:
